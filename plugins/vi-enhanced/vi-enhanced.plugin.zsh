@@ -2,6 +2,9 @@
 bindkey -N myviins viins
 bindkey -A myviins main
 
+bindkey -r '^I'
+bindkey '^I' expand-or-complete-prefix 
+
 bindkey -r '^B'
 bindkey '^B' backward-char
 bindkey -r '^F'
