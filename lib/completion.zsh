@@ -62,3 +62,26 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
 # ... unless we really want to.
 zstyle '*' single-ignored show
 
+#autoload bashcompinit
+#bashcompinit
+#
+#bash_source() {
+#  alias shopt=':'
+#  alias _expand=_bash_expand
+#  alias _complete=_bash_comp
+#  emulate -L sh
+#  setopt kshglob noshglob braceexpand
+#
+#  source "$@"
+#}
+#
+#have() {
+#  unset have
+#  (( ${+commands[$1]} )) && have=yes
+#}
+
+
+#for i in ~/.my_bash/completion/* ; do 
+  #bash_source $i 
+#done
+
