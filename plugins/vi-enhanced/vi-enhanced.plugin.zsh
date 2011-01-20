@@ -49,6 +49,16 @@ bindkey 'p' history-beginning-search-backward
 bindkey -M vicmd '^U' backward-kill-line
 bindkey  -M vicmd '^?' delete-char
 
+bindkey  -M vicmd '^A' beginning-of-line
+bindkey  -M vicmd '^E' end-of-line
+bindkey  -M vicmd '^B' backward-char
+bindkey  -M vicmd '^F' forward-char
+bindkey  -M vicmd '^K' kill-line
+bindkey  -M vicmd '^U' backward-kill-line
+bindkey  -M vicmd '^H' backward-delete-char
+bindkey  -M vicmd '^D' delete-char
+bindkey  -M vicmd '^W' backward-delete-word
+
 bindkey -r ' '
 bindkey ' ' magic-space    # also do history expansion on space
 
@@ -58,8 +68,9 @@ bindkey '^Y' copy-prev-shell-word
 bindkey -M menuselect '^J' accept-and-infer-next-history
 bindkey -M menuselect '^P' reverse-menu-complete
 
+#bindkey -M isearch -r '^W'
 #bindkey -M isearch '^W' backward-delete-word
-#bindkey -M isearch '^L' clear-screen
+bindkey -M isearch '^L' clear-screen
 #bindkey -M isearch '^R' history-incremental-search-backward
 #bindkey -M isearch '^S' history-incremental-search-forward
 
