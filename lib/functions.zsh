@@ -104,14 +104,13 @@ function myip {
 function rt()
 {
  # shortcut to start rails test
- if [ $* ]; then 
-   ruby -Itest $*
-   #case $* in 
-     #*/unit/*) rake test:units TEST=$* ;;
-     #*/functional/*) rake test:functionals TEST=$* ;;
-     #*/integration/*) rake test:integration TEST=$* ;;
-     #*) echo -n "this test is not supported" ;;
-    #esac
+ if [ "$*" ]; then 
+   str_cmd="$*"
+   if [[ ${str_cmd:0:9} == "features/" ]]; then
+     bundle exec cucumber -f pretty $*
+   else
+     ruby -Itest $*
+   fi
  else
    rake 
  fi
