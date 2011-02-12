@@ -12,13 +12,13 @@
 #}
 
 function precmd {
-  title zsh "$PWD"
+  #title zsh "$PWD"
 }
 
 function preexec {
-  emulate -L zsh
-  local -a cmd; cmd=(${(z)1})
-  title $cmd[1]:t "$cmd[2,-1]"
+  #emulate -L zsh
+  #local -a cmd; cmd=(${(z)1})
+  #title $cmd[1]:t "$cmd[2,-1]"
 }
 
 function zsh_stats() {
